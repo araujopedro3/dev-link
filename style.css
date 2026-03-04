@@ -30,6 +30,7 @@
 
 body {
   background: var(--bg-url) no-repeat top center/cover;
+  transition: background 0.5s, color 0.5s;
 }
 body * {
   font-family: "Inter", sans-serif;
@@ -80,7 +81,7 @@ ul li a {
   background: var(--surface-color);
   border: 1px solid var(--stroke-color);
   border-radius: 8px;
-  backdrop-filter: blur(4px);
+  backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(4px);
 
   text-decoration: none;
@@ -138,5 +139,6 @@ footer {
     --bg-url: url(./assets/bg-desktop-light.jpg);
   }
 } */
+
 
 
