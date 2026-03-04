@@ -9,29 +9,26 @@
   --bg-url: url(./assets/bg-mobile.jpg);
   --stroke-color: rgba(255, 255, 255, 0.5);
   --surface-color: rgba(255, 255, 255, 0.05);
-  --surface-color-hover: rgba(0, 0, 0, 0.01);
-  --highlight-color: rgba(255, 255, 255, 0.2);
+  --surface-color-hover: rgba(255, 255, 255, 0.1);
+  /* Cor do Brilho no Modo Escuro (Azul Neon) */
+  --highlight-color: #00f2ff; 
 }
 
 .light {
-  --text-color: black;
+  --text-color: #2d3436;
   --bg-url: url(./assets/bg-mobile-light.jpg);
-  --stroke-color: rgba(0, 0, 0, 0.5);
+  --stroke-color: rgba(0, 0, 0, 0.3);
   --surface-color: rgba(0, 0, 0, 0.05);
-  --surface-color-hover: rgba(0, 0, 0, 0.2);
-  --highlight-color: rgba(0, 0, 0, 0.1);
+  --surface-color-hover: rgba(0, 0, 0, 0.1);
+  /* Cor do Brilho no Modo Claro (Dourado/Laranja) */
+  --highlight-color: #f39c12;
 }
-
-/*body {
-  /*background-image: url(./assets/bg-mobile.jpg);
-  background-repeat: no-repeat;
-  background-position: top center;
-  background-size: cover;*/
 
 body {
   background: var(--bg-url) no-repeat top center/cover;
   transition: background 0.5s, color 0.5s;
 }
+
 body * {
   font-family: "Inter", sans-serif;
   font-weight: 400;
@@ -52,6 +49,7 @@ body * {
 
 #profile img {
   width: 112px;
+  border-radius: 50%; /* Garante que a foto fique redonda */
 }
 
 #profile p {
@@ -61,14 +59,12 @@ body * {
   margin-top: 8px;
 }
 
-/* links - lista */
+/* Links - Lista */
 ul {
   list-style: none;
-
   display: flex;
   flex-direction: column;
   gap: 16px;
-
   padding: 24px 0;
 }
 
@@ -76,36 +72,33 @@ ul li a {
   display: flex;
   justify-content: center;
   align-items: center;
-
   padding: 16px 24px;
   background: var(--surface-color);
   border: 1px solid var(--stroke-color);
   border-radius: 8px;
   backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(4px);
-
+  -webkit-backdrop-filter: blur(10px);
   text-decoration: none;
   font-weight: 500;
-
-  transition: background 0.1s, transform 0.1s, border 0.1s;
+  transition: all 0.3s ease; /* Transição mais suave para o brilho */
 }
 
-/* pseudo-selector */
+/* Efeito de Brilho nos Botões */
 ul li a:hover {
   background: var(--surface-color-hover);
-  border: 1.5px solid var(--text-color);
+  border: 1.5px solid var(--highlight-color);
   transform: scale(1.02);
   
-  box-shadow: 0 0 15px 2px var(--stroke-color);
-  text-shadow: 0 0 4px var(--text-color);
+  /* Brilho colorido dinâmico */
+  box-shadow: 0 0 15px var(--highlight-color);
+  text-shadow: 0 0 5px var(--highlight-color);
 }
 
-/*social links*/
+/* Social Links */
 #social-links {
   display: flex;
   justify-content: center;
   padding: 24px 0;
-
   font-size: 24px;
 }
 
@@ -114,35 +107,30 @@ ul li a:hover {
   align-items: center;
   justify-content: center;
   padding: 16px;
-
-  transition: background 0.15s, transform 0.15s;
+  transition: all 0.3s ease;
   border-radius: 50%;
 }
 
 #social-links a:hover {
-  background: var(--highlight-color);
+  background: var(--surface-color-hover);
   transform: translateY(-8px);
-  box-shadow: 0 0 20px var(--text-color);
-  filter: drop-shadow(0 0 8px var(--text-color));
+  
+  /* Brilho colorido nos ícones */
+  box-shadow: 0 0 25px var(--highlight-color);
+  filter: drop-shadow(0 0 5px var(--highlight-color));
 }
 
-/* footer */
 footer {
   padding: 24px;
   text-align: center;
   font-size: 14px;
 }
 
-/* No final do seu arquivo CSS 
- @media (min-width: 700px) {
+@media (min-width: 700px) {
   :root {
-    --bg-url: url(./assets/bg-desktop.jpg); /* Se você tiver uma versão desktop 
+    --bg-url: url(./assets/bg-desktop.jpg);
   }
   .light {
     --bg-url: url(./assets/bg-desktop-light.jpg);
   }
-} */
-
-
-
-
+}
