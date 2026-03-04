@@ -38,8 +38,8 @@ body * {
 }
 
 #container {
-  max-width: 360px
-  width: 100%px;
+  max-width: 360px;
+  width: 100%;
   margin: 56px auto 0px;
   padding: 0 24px;
 }
@@ -127,3 +127,12 @@ footer {
   font-size: 14px;
 }
 
+/* No final do seu arquivo CSS 
+ @media (min-width: 700px) {
+  :root {
+    --bg-url: url(./assets/bg-desktop.jpg); /* Se você tiver uma versão desktop 
+  }
+  .light {
+    --bg-url: url(./assets/bg-desktop-light.jpg);
+  }
+} */
