@@ -93,8 +93,11 @@ ul li a {
 /* pseudo-selector */
 ul li a:hover {
   background: var(--surface-color-hover);
-  border: 1.5px solid var(--highlight-color);
+  border: 1.5px solid var(--text-color);
   transform: scale(1.02);
+  
+  box-shadow: 0 0 15px 2px var(--stroke-color);
+  text-shadow: 0 0 4px var(--text-color);
 }
 
 /*social links*/
@@ -119,8 +122,8 @@ ul li a:hover {
 #social-links a:hover {
   background: var(--highlight-color);
   transform: translateY(-8px);
-  box-shadow: 0 0 12px var(--text-color);
-  filter: drop-shadow(0 0 4px var(--text-color));
+  box-shadow: 0 0 20px var(--text-color);
+  filter: drop-shadow(0 0 8px var(--text-color));
 }
 
 /* footer */
@@ -139,6 +142,7 @@ footer {
     --bg-url: url(./assets/bg-desktop-light.jpg);
   }
 } */
+
 
 
 
